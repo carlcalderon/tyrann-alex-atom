@@ -1,0 +1,115 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "colors";
+
+.editor-colors {
+  background-color: @background;
+  color: @foreground;
+}
+
+.editor {
+  .invisible-character,
+  .indent-guide {
+    color: @invisibles;
+  }
+
+  .gutter {
+    background-color: @invisibles;
+  }
+
+  .gutter .line-number {
+    opacity: 0.8;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @invisibles;
+  }
+
+  .cursor {
+    border-color: @caret;
+  }
+
+  .selection .region {
+    background-color: @selection;
+    color: @foreground;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @line-highlight;
+  }
+  .line.cursor-line {
+      background: @line-highlight;
+  }
+}
+
+.bracket-matcher {
+  background-color: @invisibles;
+  opacity: 0.7;
+}
+
+.comment {
+  color: @comment;
+  font-style: italic;
+}
+
+.entity {
+  color: @tag-name;
+  .name {
+    color: @variable;
+  }
+}
+
+.keyword {
+  color: @keyword;
+}
+
+.storage {
+  color: @storage;
+}
+
+.support {
+  color: @storage;
+}
+
+.constant {
+  color: @constant;
+
+  &.numeric,
+  &.boolean {
+    color: @number;
+  }
+}
+
+.variable {
+  color: @variable;
+}
+
+.delimiter, .brace {
+  color: @foreground;
+}
+
+.delimiter.period {
+  color: @operator;
+}
+
+.invalid {
+  background-color: @invalid-background;
+  color: @invalid-foreground;
+}
+
+.string {
+  color: @string;
+
+  .constant.character.escape {
+    color: @regex;
+  }
+
+  &.regexp {
+    color: @regex;
+  }
+}
